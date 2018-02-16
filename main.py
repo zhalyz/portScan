@@ -19,7 +19,7 @@ def hosts(host):
 def request(host):
     response=requests.get('http://'+host)
     if response.headers['Server']=='':
-        print("Поле \"Server\" в зоголовке отсутствует")
+        print("Поле \"Server\" в заголовке отсутствует")
     else:
         print("Server: "+response.headers['Server'])
 
