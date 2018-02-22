@@ -44,8 +44,7 @@ def error():
 
 def check_ip_format(host):
     """ Check input ip format """
-    if re.match(r'\d + [.] + \d + [.] + \d\
-     + [.] + \d + [/] + \d + $', host) is None:
+    if re.match(r'\d+[.]+\d+[.]+\d\+[.]+\d+[/]+\d+$', host) is None:
         error()
         return False
     sub = int(host.split('/')[1])
@@ -62,7 +61,7 @@ def check_ip_format(host):
 
 def check_ports_format(mas):
     """ Check input ports format"""
-    if re.match(r'\d + ([,]\d + ) * $', mas) is None:
+    if re.match(r'\d+([,]\d+)*$', mas) is None:
         error()
         return False
     return True
